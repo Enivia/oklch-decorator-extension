@@ -118,7 +118,6 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
-    console.log(`Updating decorations for: ${activeEditor.document.uri.toString()}`);
     const text = activeEditor.document.getText();
     const decorations: vscode.DecorationOptions[] = [];
 
@@ -128,7 +127,6 @@ export function activate(context: vscode.ExtensionContext) {
 
     while ((match = oklchRegex.exec(text))) {
       const colorStr = match[0];
-      console.log(`Found OKLCH color: ${colorStr}`);
 
       const startPos = activeEditor.document.positionAt(match.index);
       const endPos = activeEditor.document.positionAt(match.index + colorStr.length);
@@ -145,9 +143,7 @@ export function activate(context: vscode.ExtensionContext) {
 
       const color = parseOKLCH(colorStr);
       if (color) {
-        console.log("Parsed color:", color);
         const rgb = oklchToRGB(color);
-        console.log("Converted to RGB:", rgb);
         if (decoration.renderOptions?.before) {
           decoration.renderOptions.before.backgroundColor = rgb;
         }
@@ -155,7 +151,6 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
 
-    console.log(`Setting decorations: ${decorations.length}`);
     activeEditor.setDecorations(decorationType, decorations);
   }
 

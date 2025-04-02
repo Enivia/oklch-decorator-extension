@@ -1,100 +1,46 @@
-# OKLCH Color Decorator Extension
+# OKLCH Color Decorator
 
-A VSCode extension that helps you work with OKLCH colors in your stylesheets. It provides visual color previews and easy conversion between OKLCH and other color formats.
+A Visual Studio Code extension that provides visual previews and conversion tools for OKLCH colors in your stylesheets.
 
 ## Features
 
-- 🎨 Color Preview: Shows color previews next to OKLCH and other color values in your CSS, LESS, SCSS, and SASS files
-- 🔄 Easy Conversion: Click on any color value to convert it to OKLCH or RGBA format
-- 🎯 Hover Information: Hover over color values to see conversion options
-- 📝 Supports Multiple Formats:
-  - OKLCH
-  - HEX
-  - RGB/RGBA
-  - HSL/HSLA
-  - Modern CSS Color 4 syntax
+- **OKLCH Color Preview**: Shows a color preview square next to OKLCH color values in your stylesheets
+- **Quick Conversion**: Click on any OKLCH color to convert it to RGBA format
+- **Hover Information**: Hover over OKLCH colors to see preview and conversion options
+- **Supported OKLCH Format**:
+
+  ```css
+  /* Basic OKLCH color */
+  color: oklch(0.7 0.15 30);
+
+  /* OKLCH with alpha channel */
+  color: oklch(0.7 0.15 30 / 0.5);
+  color: oklch(70% 0.15 30 / 50%);
+  ```
 
 ## Usage
 
 1. Open any CSS, LESS, SCSS, or SASS file
-2. You'll see color previews next to all color values:
-   - For OKLCH colors: preview appears on the left
-   - For other color formats: preview appears on the right
-
-3. To convert colors:
-   - Click directly on a color value to convert it
-   - Or hover over a color value and click the conversion link
-   - OKLCH colors will be converted to RGBA
-   - Other color formats will be converted to OKLCH
-
-## Commands
-
-- `Convert OKLCH to RGBA`: Converts an OKLCH color to RGBA format
-- `Convert to OKLCH`: Converts any supported color format to OKLCH
-
-## Examples
-
-```css
-/* OKLCH colors */
-color: oklch(0.7 0.15 30);
-color: oklch(0.7 0.15 30 / 0.5);
-
-/* Other color formats that can be converted */
-color: #ff0000;
-color: rgb(255, 0, 0);
-color: rgba(255, 0, 0, 0.5);
-color: hsl(0, 100%, 50%);
-color: hsla(0, 100%, 50%, 0.5);
-
-/* Modern CSS Color 4 syntax */
-color: rgb(255 0 0);
-color: rgb(255 0 0 / 0.5);
-color: hsl(0 100% 50%);
-color: hsl(0 100% 50% / 0.5);
-```
-
-## Requirements
-
-- Visual Studio Code version 1.60.0 or higher
-
-## Extension Settings
-
-This extension contributes the following settings:
-
-* None at the moment
-
-## Known Issues
-
-- None at the moment
+2. The extension will automatically show color previews next to OKLCH color values
+3. To convert an OKLCH color to RGBA:
+   - Click directly on the OKLCH color value
+   - Or hover over the color and click the "Convert to RGBA" link
+   - The OKLCH color will be replaced with its RGBA equivalent
 
 ## Release Notes
 
-### 1.0.0
+### 0.0.1
 
 Initial release:
-- Color preview for OKLCH and other color formats
-- Color conversion between OKLCH and other formats
+
+- OKLCH color preview functionality
+- Click-to-convert to RGBA format
 - Hover information with conversion options
 
----
+## Contributing
 
-## Following extension guidelines
+Found a bug or want to contribute? Feel free to open an issue or submit a pull request on my [GitHub repository](https://github.com/enivia/oklch-decorator-extension).
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+## License
 
-- [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-- Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-- Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-- Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-- [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-- [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+This extension is licensed under the [MIT License](LICENSE).
