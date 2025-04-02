@@ -1,51 +1,80 @@
-# oklch-decorator README
+# OKLCH Color Decorator Extension
 
-This is the README for your extension "oklch-decorator". After writing up a brief description, we recommend including the following sections.
+A VSCode extension that helps you work with OKLCH colors in your stylesheets. It provides visual color previews and easy conversion between OKLCH and other color formats.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 🎨 Color Preview: Shows color previews next to OKLCH and other color values in your CSS, LESS, SCSS, and SASS files
+- 🔄 Easy Conversion: Click on any color value to convert it to OKLCH or RGBA format
+- 🎯 Hover Information: Hover over color values to see conversion options
+- 📝 Supports Multiple Formats:
+  - OKLCH
+  - HEX
+  - RGB/RGBA
+  - HSL/HSLA
+  - Modern CSS Color 4 syntax
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open any CSS, LESS, SCSS, or SASS file
+2. You'll see color previews next to all color values:
+   - For OKLCH colors: preview appears on the left
+   - For other color formats: preview appears on the right
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+3. To convert colors:
+   - Click directly on a color value to convert it
+   - Or hover over a color value and click the conversion link
+   - OKLCH colors will be converted to RGBA
+   - Other color formats will be converted to OKLCH
+
+## Commands
+
+- `Convert OKLCH to RGBA`: Converts an OKLCH color to RGBA format
+- `Convert to OKLCH`: Converts any supported color format to OKLCH
+
+## Examples
+
+```css
+/* OKLCH colors */
+color: oklch(0.7 0.15 30);
+color: oklch(0.7 0.15 30 / 0.5);
+
+/* Other color formats that can be converted */
+color: #ff0000;
+color: rgb(255, 0, 0);
+color: rgba(255, 0, 0, 0.5);
+color: hsl(0, 100%, 50%);
+color: hsla(0, 100%, 50%, 0.5);
+
+/* Modern CSS Color 4 syntax */
+color: rgb(255 0 0);
+color: rgb(255 0 0 / 0.5);
+color: hsl(0 100% 50%);
+color: hsl(0 100% 50% / 0.5);
+```
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code version 1.60.0 or higher
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-- `myExtension.enable`: Enable/disable this extension.
-- `myExtension.thing`: Set to `blah` to do something.
+* None at the moment
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- None at the moment
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release:
+- Color preview for OKLCH and other color formats
+- Color conversion between OKLCH and other formats
+- Hover information with conversion options
 
 ---
 
