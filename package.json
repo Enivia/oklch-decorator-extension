@@ -2,6 +2,7 @@
   "name": "oklch-decorator",
   "displayName": "OKLCH decorator",
   "description": "Preview and convert OKLCH colors for CSS files in vscode",
+  "repository": "https://github.com/Enivia/oklch-decorator-extension",
   "version": "0.0.1",
   "license": "MIT",
   "author": {
