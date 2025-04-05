@@ -1,6 +1,6 @@
 # OKLCH Color Decorator
 
-![OKLCH Color Decorator](https://github.com/Enivia/oklch-decorator-extension/raw/HEAD/image.png)
+![OKLCH Color Decorator](https://github.com/Enivia/oklch-decorator-extension/raw/HEAD/images/oklch-decorator.png)
 
 A Visual Studio Code extension that provides visual previews and conversion tools for OKLCH colors in your stylesheets.
 
