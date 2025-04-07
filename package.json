@@ -5,7 +5,7 @@
   "description": "Preview and convert OKLCH colors for CSS files in vscode",
   "icon": "images/logo.png",
   "repository": "https://github.com/Enivia/oklch-decorator-extension",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "author": {
     "name": "Enivia",
@@ -26,29 +26,20 @@
     "onLanguage:css",
     "onLanguage:less",
     "onLanguage:scss",
-    "onLanguage:sass"
+    "onLanguage:sass",
+    "onLanguage:javascript",
+    "onLanguage:typescript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:html"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "oklch-decorator.convertToRGBA",
-        "title": "Convert OKLCH to RGBA"
-      },
-      {
-        "command": "oklch-decorator.convertToOKLCH",
-        "title": "Convert to OKLCH"
-      }
-    ],
-    "languages": [
-      {
-        "id": "style",
-        "extensions": [
-          ".css",
-          ".less",
-          ".scss",
-          ".sass"
-        ]
+        "command": "oklch-decorator.applyColor",
+        "title": "Apply Color Format"
       }
     ]
   },
@@ -61,7 +52,6 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/culori": "^2.1.1",
     "@types/mocha": "^10.0.10",
     "@types/node": "20.x",
     "@types/vscode": "^1.98.0",
@@ -71,8 +61,5 @@
     "@vscode/test-electron": "^2.4.1",
     "eslint": "^9.23.0",
     "typescript": "^5.8.2"
-  },
-  "dependencies": {
-    "culori": "^4.0.0"
   }
 }
