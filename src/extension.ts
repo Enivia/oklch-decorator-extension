@@ -197,7 +197,6 @@ export function activate(context: vscode.ExtensionContext) {
             textDecoration: "none; cursor: pointer;",
           },
         },
-        hoverMessage: "悬停查看颜色格式选项",
       };
 
       const color = parseOKLCH(colorStr);
